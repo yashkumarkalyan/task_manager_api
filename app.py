@@ -5,7 +5,7 @@ from flask_restful import Api
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///task_manager.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['JWT_SECRET_KEY'] = 'your-secret-key'  # Replace with your own secret key
+app.config['JWT_SECRET_KEY'] = '249130ae3d96c80e83d9ffd25fb602e22da0fcfc909885f1cb657d47ef72bd99'  # Replace with your own secret key
 
 db = SQLAlchemy(app)
 jwt = JWTManager(app)
