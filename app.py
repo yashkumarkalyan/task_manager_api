@@ -2,7 +2,6 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_jwt_extended import JWTManager
 from flask_restful import Api
-
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///task_manager.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -13,8 +12,8 @@ jwt = JWTManager(app)
 api = Api(app)
 
 if __name__ == '__main__':
-    from resources.task import TaskResource, TaskListResource
-    from resources.user import UserResource, UserRegisterResource
+    from resourcesx.task import TaskResource, TaskListResource
+    from resourcesx.user import UserResource, UserRegisterResource
     
     db.create_all()
     
